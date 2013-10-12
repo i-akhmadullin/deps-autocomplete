@@ -1,0 +1,49 @@
+{
+    "scope": "source.deps",
+
+    "completions": [
+
+        { "trigger": "init", "contents": "({\n\tmustDeps: [$1],\n\tshouldDeps: [\n\t\t$2\n\t]\n})$0" },
+        { "trigger": "({ mustDeps: [ ... ], shouldDeps: [ ... ] })", "contents": "({\n\tmustDeps: [$1],\n\tshouldDeps: [\n\t\t$2\n\t]\n})$0" },
+
+        { "trigger": "mustDeps", "contents": "mustDeps: [$1],$0" },
+        { "trigger": "shouldDeps", "contents": "shouldDeps: [\n\t$1\n],$0" },
+        { "trigger": "noDeps", "contents": "noDeps: [$1],$0" },
+
+        { "trigger": "block", "contents": "'${1:blockName}',$0" },
+        { "trigger": "block: 'blockName'", "contents": "{ block: '${1:blockName}' },$0" },
+
+        { "trigger": "block: 'blockName', mods: { modName: modVal },", "contents": "{ block: '${1:blockName}', mods: { ${2:modName}: '${3:modVal}' } },$0" },
+        { "trigger": "block: 'blockName', mods: { modName: [modVal1, modVal2] },", "contents": "{ block: '${1:blockName}', mods: { ${2:modName}: ['${3:modVal1}', '${4:modVal2}'] } },$0" },
+
+        { "trigger": "block: 'blockName', elem: 'elemName'", "contents": "{ block: '${1:blockName}', elem: '${2:elemName}' },$0" },
+        { "trigger": "block: 'blockName', elem: 'elemName', mods: { modName: modVal1 },", "contents": "{ block: '${1:blockName}', elem: '${2:elemName}', mods: { ${3:modName}: '${4:modVal1}' } },$0" },
+        { "trigger": "block: 'blockName', elems: [elemName1, elemName2],", "contents": "{ block: '${1:blockName}', elems: ['${2:elemName}', '${3:elemName2}'] } },$0" },
+
+
+        { "trigger": "elem: 'elemName'", "contents": "{ elem: '${1:elemName}' },$0" },
+        { "trigger": "elems: ['elemName1', 'elemName2']", "contents": "{ elems: ['${1:elemName1}', '${2:elemName2}'] },$0" },
+
+
+        { "trigger": "mods: { modName: 'modVal' } }", "contents": "{ mods: { ${1:modName}: '${2:modVal}' } },$0" },
+
+        // { "trigger": "block: 'blockDeps'", "contents": "block: '${1:bBlock}',$0" },
+        // { "trigger": "elem: 'elemDeps'", "contents": "elem: '${1:elem}',$0" },
+        // { "trigger": "mod: 'modNameDeps'", "contents": "mod: '${1:modName}',$0" },
+        // { "trigger": "val: 'modValueDeps'", "contents": "val: '${1:modValue}',$0" },
+        // { "trigger": "tech: 'techNameDeps'", "contents": "tech: '${1:techName}',$0" },
+
+
+        // "block",
+        // "elem",
+        // "mod",
+        // "val",
+        // "tech",
+
+        "elems",
+        "mods",
+        "modName",
+        "modVal",
+        "null"
+    ]
+}
