@@ -6,9 +6,9 @@
         { "trigger": "init", "contents": "({\n\tmustDeps: [$1],\n\tshouldDeps: [\n\t\t$2\n\t]\n})$0" },
         { "trigger": "({ mustDeps: [ ... ], shouldDeps: [ ... ] })", "contents": "({\n\tmustDeps: [$1],\n\tshouldDeps: [\n\t\t$2\n\t]\n})$0" },
 
-        { "trigger": "mustDeps", "contents": "mustDeps: [$1],$0" },
-        { "trigger": "shouldDeps", "contents": "shouldDeps: [\n\t$1\n],$0" },
-        { "trigger": "noDeps", "contents": "noDeps: [$1],$0" },
+        { "trigger": "mustDeps: [ ... ]", "contents": "mustDeps: [\n\t$1\n],$0" },
+        { "trigger": "shouldDeps: [ ... ]", "contents": "shouldDeps: [\n\t$1\n],$0" },
+        { "trigger": "noDeps: [ ... ]", "contents": "noDeps: [\n\t$1\n],$0" },
 
         { "trigger": "block", "contents": "'${1:blockName}',$0" },
         { "trigger": "block: 'blockName'", "contents": "{ block: '${1:blockName}' },$0" },
@@ -22,8 +22,8 @@
 
 
         { "trigger": "elem: 'elemName'", "contents": "{ elem: '${1:elemName}' },$0" },
+        { "trigger": "elem: 'elemName', mods: { modName: 'modVal' }", "contents": "{ elem: '${1:elemName}', mods: { ${2:modName}: '${3:modVal}' } },$0" },
         { "trigger": "elems: ['elemName1', 'elemName2']", "contents": "{ elems: ['${1:elemName1}', '${2:elemName2}'] },$0" },
-
 
         { "trigger": "mods: { modName: 'modVal' } }", "contents": "{ mods: { ${1:modName}: '${2:modVal}' } },$0" },
 
