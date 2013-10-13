@@ -13,12 +13,12 @@
         { "trigger": "block", "contents": "'${1:blockName}',$0" },
         { "trigger": "block: 'blockName'", "contents": "{ block: '${1:blockName}' },$0" },
 
-        { "trigger": "block: 'blockName', mods: { modName: modVal },", "contents": "{ block: '${1:blockName}', mods: { ${2:modName}: '${3:modVal}' } },$0" },
-        { "trigger": "block: 'blockName', mods: { modName: [modVal1, modVal2] },", "contents": "{ block: '${1:blockName}', mods: { ${2:modName}: ['${3:modVal1}', '${4:modVal2}'] } },$0" },
+        { "trigger": "block: 'blockName', mods: { modName: modVal },", "contents": "{\n\tblock: '${1:blockName}',\n\tmods: { ${2:modName}: '${3:modVal}' }\n},$0" },
+        { "trigger": "block: 'blockName', mods: { modName: [modVal1, modVal2] },", "contents": "{\n\tblock: '${1:blockName}',\n\tmods: {\n\t\t${2:modName}: ['${3:modVal1}', '${4:modVal2}']\n\t}\n},$0" },
 
-        { "trigger": "block: 'blockName', elem: 'elemName'", "contents": "{ block: '${1:blockName}', elem: '${2:elemName}' },$0" },
-        { "trigger": "block: 'blockName', elem: 'elemName', mods: { modName: modVal1 },", "contents": "{ block: '${1:blockName}', elem: '${2:elemName}', mods: { ${3:modName}: '${4:modVal1}' } },$0" },
-        { "trigger": "block: 'blockName', elems: [elemName1, elemName2],", "contents": "{ block: '${1:blockName}', elems: ['${2:elemName}', '${3:elemName2}'] } },$0" },
+        { "trigger": "block: 'blockName', elem: 'elemName'", "contents": "{\n\tblock: '${1:blockName}',\n\telem: '${2:elemName}'\n},$0" },
+        { "trigger": "block: 'blockName', elem: 'elemName', mods: { modName: modVal1 },", "contents": "{\n\tblock: '${1:blockName}',\n\telem: '${2:elemName}',\n\tmods: {\n\t\t${3:modName}: '${4:modVal1}'\n\t}\n},$0" },
+        { "trigger": "block: 'blockName', elems: [elemName1, elemName2],", "contents": "{\n\tblock: '${1:blockName}',\n\telems: ['${2:elemName}', '${3:elemName2}']\n},$0" },
 
 
         { "trigger": "elem: 'elemName'", "contents": "{ elem: '${1:elemName}' },$0" },
@@ -40,7 +40,6 @@
         // "val",
         // "tech",
 
-        "elems",
         "mods",
         "modName",
         "modVal",
