@@ -4,7 +4,7 @@
     "completions": [
 
         { "trigger": "init", "contents": "({\n\tmustDeps: [$1],\n\tshouldDeps: [\n\t\t$2\n\t]\n})$0" },
-        { "trigger": "({ mustDeps: [ ... ], shouldDeps: [ ... ] })", "contents": "({\n\tmustDeps: [$1],\n\tshouldDeps: [\n\t\t$2\n\t]\n})$0" },
+        { "trigger": "mustDeps: [ ... ], shouldDeps: [ ... ] })", "contents": "({\n\tmustDeps: [$1],\n\tshouldDeps: [\n\t\t$2\n\t]\n})$0" },
 
         { "trigger": "mustDeps: [ ... ]", "contents": "mustDeps: [\n\t$1\n],$0" },
         { "trigger": "shouldDeps: [ ... ]", "contents": "shouldDeps: [\n\t$1\n],$0" },
