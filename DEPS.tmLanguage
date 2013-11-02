@@ -555,15 +555,9 @@
 		</dict>
 	<dict>
 		<key>match</key>
-		<string>\b(block|mods|mod|val|content|js|elem|elems|mix|attrs|alt|url|tech)\b</string>
+		<string>\b(block|mods|mod|val|content|js|elem|elems|mix|attrs|alt|url|tech|mustDeps|shouldDeps|noDeps)\b</string>
 		<key>name</key>
 		<string>keyword.dependency.param</string>
-	</dict>
-	<dict>
-		<key>match</key>
-		<string>\b(mustDeps|shouldDeps|noDeps)\b</string>
-		<key>name</key>
-		<string>entity.dependency</string>
 	</dict>
 		<dict>
 			<key>match</key>
